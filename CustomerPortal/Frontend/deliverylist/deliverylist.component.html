@@ -1,0 +1,42 @@
+<mat-toolbar>
+    <h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     &nbsp; DELIVERY LIST</h1>
+   </mat-toolbar>
+  <div class="container">
+  <app-navbar></app-navbar>
+  <div class="content mat-elevation-z8">
+   
+  <div style="overflow-x:auto;">
+    <table>
+        <tr id="heading">
+          <th>Sales and Distribution Document Number</th>
+          <th>Entry time</th>
+          <th>Record Creation Date</th>
+          <th>Sales Organization</th>
+          <th>Delivery Type</th>
+          <th>Delivery Date</th>
+          <th>Incoterms</th>
+          <th>Proposed Billing Type</th>
+          <th>Time of delivery</th>
+
+  
+
+        </tr>
+         <tr *ngFor ="let value of delivery['Envelope']['Body']['ZFM_DELIVERYLISTSPResponse']['IT_DEL_INFO']['item']">           
+          <td>{{value.VBELN}}</td>
+          <td>{{value.ERZET}}</td>
+          <td>{{value.ERDAT}}</td>
+          <td>{{value.VKORG}}</td>
+          <td>{{value.LFART}}</td>
+          <td>{{value.LFDAT}}</td>
+          <td>{{value.INCO2}}</td>
+          <td>{{value.FKARV}}</td>
+          <td>{{value.LFUHR}}</td>
+         
+     </tr>
+ </table>
+</div>
+
+    </div>
+  </div>
+  

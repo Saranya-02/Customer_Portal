@@ -1,0 +1,38 @@
+<mat-toolbar>
+    <h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     &nbsp; INQUIRY DATA</h1>
+   </mat-toolbar>
+  <div class="container">
+  <app-navbar></app-navbar>
+  <div class="content mat-elevation-z8">
+   
+  <div style="overflow-x:auto;">
+      <table>
+          <tr id="heading">
+           <th>Customer Number</th>
+           <th>Sales Document Number</th>
+           <th>Record Creation Date</th>
+           <th>Person Creating Record</th>
+           <th>Document Date</th>
+           <th>Delivery Block</th>
+           <th>Net Value</th>
+           <th>Business Area</th>
+           <th>Telephone Number</th>
+
+          </tr>
+           <tr *ngFor ="let value of inquiry['Envelope']['Body']['ZFM_CUSTINQUIRYSPResponse']['IT_INQUIRY']['item']">           
+           <td>{{value.KUNNR}}</td>
+           <td>{{value.VBELN}}</td>
+           <td>{{value.ERDAT}}</td>
+           <td>{{value.ERNAM}}</td>
+           <td>{{value.AUDAT}}</td>
+           <td>{{value.LIFSK}}</td>
+           <td>{{value.NETWR}}</td>
+           <td>{{value.GSKST}}</td>
+           <td>{{value.TELF1}}</td>
+       </tr>
+   </table>
+  </div>
+ </div>
+  </div>
+  

@@ -1,0 +1,55 @@
+<mat-toolbar>
+    <h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     &nbsp; INVOICE DATA</h1>
+   </mat-toolbar>
+  <div class="container">
+  <app-navbar></app-navbar>
+  <div class="content mat-elevation-z8">
+   
+      
+    <mat-card-actions style = "display:flex; flex-direction: column; align-items: center; ">
+      <h1>Invoice Form</h1>
+      <button mat-button color="black" style="background-color: #008ef5;" (click)="downloadPDF()"> PDF DOWNLOAD</button>
+  </mat-card-actions>
+
+
+  <br><br>
+  <div style="overflow-x:auto;">
+    <table>
+        <tr id="heading">
+          <th>Billing Document Number</th>
+          <th>Billing Date</th>
+          <th>Billing Type</th>
+          <th>Sales Organization</th>
+          <th>Distribution Channel</th>
+          <th>Division</th>
+          <th>Sold-to Party</th>
+          <th>Currency</th>
+          <th>Total Invoice Amount</th>
+          <th>Payment Terms</th>
+          
+
+  
+
+        </tr>
+         <tr *ngFor ="let value of invoice['Envelope']['Body']['ZFM_INVOICESPResponse']['IT_INVOICE']['item']">           
+          <td>{{value.VBELN}}</td>
+          <td>{{value.FKDAT}}</td>
+          <td>{{value.BLART}}</td>
+          <td>{{value.VKORG}}</td>
+          <td>{{value.VTWEG}}</td>
+          <td>{{value.SPART}}</td>
+          <td>{{value.KUNAG}}</td>
+          <td>{{value.WAERK}}</td>
+          <td>{{value.NETWR}}</td>
+          <td>{{value.ZTERM}}</td>
+          
+         
+     </tr>
+ </table>
+</div>
+
+  
+    </div>
+  </div>
+  

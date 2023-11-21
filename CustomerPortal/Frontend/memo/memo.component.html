@@ -1,0 +1,67 @@
+<mat-toolbar>
+    <h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     &nbsp; MEMO DATA</h1>
+   </mat-toolbar>
+  <div class="container">
+  <app-navbar></app-navbar>
+  <div class="content mat-elevation-z8">
+   
+    <div style="overflow-x:auto;">
+      <h1>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;CREDIT MEMO</h1>
+      <table>
+          <tr id="heading">
+            <th>Company Code</th>
+            <th>Debit Credit Indicator</th>
+            <th>Document Number</th>
+            <th>Posting Key</th>
+            <th>Amount in local currency</th>
+            <th>Update Currency for General Ledger</th>
+    
+  
+          </tr>
+           <tr *ngFor ="let value of memo['Envelope']['Body']['ZFM_CREDDEBMEMOSPResponse']['CREDITMEMO_IT']['item']">           
+            <td>{{value.BUKRS}}</td>
+            <td>{{value.SHKZG}}</td>
+            <td>{{value.BELNR}}</td>
+            <td>{{value.BSCHL}}</td>
+            <td>{{value.DMBTR}}</td>
+            <td>{{value.PSWSL}}</td>
+            
+           
+       </tr>
+   </table>
+  </div>
+
+
+  
+  <div style="overflow-x:auto;">
+    <h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp;DEBIT MEMO</h1>
+    <table>
+        <tr id="heading">
+          <th>Company Code</th>
+            <th>Debit Credit Indicator</th>
+            <th>Document Number</th>
+            <th>Posting Key</th>
+            <th>Amount in local currency</th>
+            <th>Update Currency for General Ledger</th>
+  
+
+        </tr>
+         <tr *ngFor ="let value of memo['Envelope']['Body']['ZFM_CREDDEBMEMOSPResponse']['DEBITMEMO_IT']['item']">           
+          <td>{{value.BUKRS}}</td>
+          <td>{{value.SHKZG}}</td>
+          <td>{{value.BELNR}}</td>
+          <td>{{value.BSCHL}}</td>
+          <td>{{value.DMBTR}}</td>
+          <td>{{value.PSWSL}}</td>
+          
+         
+     </tr>
+ </table>
+</div>
+  
+    </div>
+  </div>
+  

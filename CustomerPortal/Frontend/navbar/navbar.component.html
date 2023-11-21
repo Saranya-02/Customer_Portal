@@ -1,0 +1,36 @@
+<mat-sidenav-container>
+    <mat-sidenav #sidenav="matSidenav" class="mat-elevation-z8">
+    <mat-icon class="account">account_circle</mat-icon>
+  
+      <h4 class="name">{{profile['Envelope']['Body']['ZFM_PROFILESPResponse']['CUSTDET_OUTPUT']['NAME1']}}</h4>
+      <mat-divider></mat-divider>
+  
+      <button mat-button class="menu-button" routerLink="/profile">
+        <mat-icon>person</mat-icon>
+        <span>Profile</span>
+      </button>
+      <button mat-button class="menu-button" routerLink="/dashboard">
+        <mat-icon>dashboard</mat-icon>
+        <span>DashBoard</span>
+      </button>
+      <button mat-button class="menu-button" routerLink="/invoice">
+        <mat-icon>receipt</mat-icon>
+        <span>Invoice Details</span>
+      </button>
+      <button mat-button class="menu-button" routerLink="/payment">
+        <!-- <mat-icon>paid</mat-icon> -->
+        <mat-icon>credit_score</mat-icon>
+        <span>Payments and Aging</span>
+      </button>
+      <button mat-button class="menu-button" routerLink="/memo">
+        <mat-icon>request_page</mat-icon>
+        <span>Credit/Debit Memo</span>
+      </button>
+      <!-- <mat-divider></mat-divider> -->
+      <!-- <button mat-button class="menu-button" routerLink="/sales">
+        <mat-icon>shopping_cart</mat-icon>
+        <span>Overall Sales Data</span>
+      </button> -->
+    </mat-sidenav>
+  </mat-sidenav-container>
+  

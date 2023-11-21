@@ -1,0 +1,56 @@
+.example-card {
+  max-width: 500px;
+  padding-left: 5px;
+  padding-right: 30px;
+  padding-top: 20px;
+  background-color:white;
+}
+
+.example-header-image {
+  background-size: cover;
+}
+
+.login{
+  display: flex;
+  justify-content: center; 
+  padding: 130px;
+  background-image: url("src\assets\gradient-yellow.jpg");;
+}
+.logintitle{
+  padding : 10px;
+  display:inline;
+  justify-content: center;
+}
+
+.input{
+margin-right: 50px;
+margin-left: 50px;
+
+}
+
+.loginbutton{
+background-color: black;
+color: white;
+}
+
+mat-label{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  font-size:14px;
+}
+
+mat-card-title{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size:30px;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  appearance: textfield;
+}

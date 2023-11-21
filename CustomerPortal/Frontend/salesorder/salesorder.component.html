@@ -1,0 +1,40 @@
+<mat-toolbar>
+    <h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     &nbsp; SALES ORDER</h1>
+   </mat-toolbar>
+  <div class="container">
+  <app-navbar></app-navbar>
+  <div class="content mat-elevation-z8">
+  
+    <div style="overflow-x:auto;">
+      <table>
+          <tr id="heading">
+            <th>Billing Document Number</th>
+            <th>Billing Type</th>
+            <th>Billing Category</th>
+            <th>Sales Organization</th>
+            <th>Pricing Procedure</th>
+            <th>Billing Date</th>
+            <th>Distribution Channel</th>
+            <th>Number of the Document Condition</th>
+            <th>Company Code</th>
+          </tr>
+
+           <tr *ngFor ="let value of salesorder['Envelope']['Body']['ZFM_SALESORDERSPResponse']['SALESORDER_IT']['item']">           
+            <td>{{value.VBELN}}</td>
+            <td>{{value.FKART}}</td>
+            <td>{{value.FKTYP}}</td>
+            <td>{{value.VKORG}}</td>
+            <td>{{value.KALSM}}</td>
+            <td>{{value.FKDAT}}</td>
+            <td>{{value.VTWEG}}</td>
+            <td>{{value.KNUMV}}</td>
+            <td>{{value.BUKRS}}</td>
+           
+       </tr>
+   </table>
+  </div>
+  
+  </div>
+  </div>
+  

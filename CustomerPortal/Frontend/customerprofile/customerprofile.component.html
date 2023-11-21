@@ -1,0 +1,30 @@
+<mat-toolbar>
+  <h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+   &nbsp; CUSTOMER PORTAL</h1>
+ </mat-toolbar>
+<div class="container">
+<app-navbar></app-navbar>
+<div class="content mat-elevation-z8">
+  <!-- <img src = "../assets/salesor.png"> -->
+    <div style="overflow-x:auto;">
+      <table id="users">
+         <tr id="header">
+          <th *ngFor ="let column of header">
+              {{column}}
+          </th>
+      </tr>
+      <tr>
+          <td>{{profile['Envelope']['Body']['ZFM_PROFILESPResponse']['CUSTDET_OUTPUT']['KUNNR']}}</td>
+          <td>{{profile['Envelope']['Body']['ZFM_PROFILESPResponse']['CUSTDET_OUTPUT']['NAME1']}}</td>
+          <td>{{profile['Envelope']['Body']['ZFM_PROFILESPResponse']['CUSTDET_OUTPUT']['ORT01']}}</td>
+          <td>{{profile['Envelope']['Body']['ZFM_PROFILESPResponse']['CUSTDET_OUTPUT']['PSTLZ']}}</td>
+          <td>{{profile['Envelope']['Body']['ZFM_PROFILESPResponse']['CUSTDET_OUTPUT']['REGIO']}}</td>
+          <td>{{profile['Envelope']['Body']['ZFM_PROFILESPResponse']['CUSTDET_OUTPUT']['TELF1']}}</td>
+          <td>{{profile['Envelope']['Body']['ZFM_PROFILESPResponse']['CUSTDET_OUTPUT']['STRAS']}}</td>
+   
+      </tr>
+         
+     </table>
+    </div>
+  </div>
+</div>

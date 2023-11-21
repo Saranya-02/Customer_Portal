@@ -1,0 +1,44 @@
+<mat-toolbar>
+    <h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+     &nbsp; PAYMENT AND AGING</h1>
+   </mat-toolbar>
+  <div class="container">
+  <app-navbar></app-navbar>
+  <div class="content mat-elevation-z8">
+    <div style="overflow-x:auto;">
+      <table>
+          <tr id="heading">
+            <th>Company Code</th>
+            <th>Customer</th>
+            <th>Fiscal Year</th>
+            <th>Document Number</th>
+            <th>Item Number</th>
+            <th>Entry Date</th>
+            <th>Currency</th>
+            <th>Document Type</th>
+            <th>Fiscal Period</th>
+            <th>Amount</th>
+  
+    
+  
+          </tr>
+           <tr *ngFor ="let value of payment['Envelope']['Body']['ZFM_PAYMENTAGINGSPResponse']['IT_DET']['item']">           
+            <td>{{value.COMP_CODE}}</td>
+            <td>{{value.CUSTOMER}}</td>
+            <td>{{value.FISC_YEAR}}</td>
+            <td>{{value.DOC_NO}}</td>
+            <td>{{value.ITEM_NUM}}</td>
+            <td>{{value.ENTRY_DATE}}</td>
+            <td>{{value.CURRENCY}}</td>
+            <td>{{value.DOC_TYPE}}</td>
+            <td>{{value.FIS_PERIOD}}</td>
+            <td>{{value.AMOUNT}}</td>
+           
+       </tr>
+   </table>
+  </div>
+  
+  
+    </div>
+  </div>
+  

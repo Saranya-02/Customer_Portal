@@ -1,0 +1,47 @@
+.center-allign {
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    width:80%;
+    margin:100px;
+}
+
+img {
+    width : 200px;
+    height : 180px;
+  }
+
+  .card {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .card:hover {
+    box-shadow: 0px 0px 10px rgb(218, 177, 177);
+    transform: scale(1.05);
+  }
+
+  h2{
+    font-style: italic;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    align-items: center;
+  }
+
+     
+.container{
+  display: flex;
+  
+}
+
+mat-toolbar {
+  background: #4f5f76;
+  color: white;
+ 
+}
+
+
+h1{
+  font-size: x-large;
+  font-weight:600;
+  letter-spacing: 1px;
+}

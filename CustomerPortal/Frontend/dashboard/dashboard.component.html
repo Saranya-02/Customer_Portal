@@ -1,0 +1,19 @@
+<mat-toolbar>
+  <h1> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+   &nbsp; CUSTOMER PORTAL</h1>
+ </mat-toolbar>
+<div class="container">
+<app-navbar></app-navbar>
+<mat-grid-list class = "center-allign" cols="3" rowHeight="300px">
+    <mat-grid-tile *ngFor="let card of cards" [routerLink]="[card.route]">
+      <mat-card class = "card">
+        <img mat-card-image src="{{card.image}}" alt="{{card.title}}">
+        <br>
+        <mat-card-content>
+          <h2>&nbsp;&nbsp;{{card.title}}</h2>
+          <!-- <p>{{card.description}}</p> -->
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
